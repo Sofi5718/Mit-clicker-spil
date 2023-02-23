@@ -73,7 +73,7 @@ img {
   overflow: hidden;
 }
 /* spil elementer */
-#Liste {
+/* #Liste {
   grid-area: 1/1;
   background-image: url(img/Liste.png);
   background-position: top right;
@@ -81,4 +81,50 @@ img {
   background-repeat: no-repeat;
   z-index: 4;
   overflow: hidden;
+}
+ */
+#game_ui {
+    position: absolute;
+    top: 2vw;
+    right: 1vw;
+    color: white;
+    
+    font-size: 2em;
+    font-family: sans-serif;
+    
+    pointer-events: none;
+    z-index: 4;
+}
+
+#score_board {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: .1em
+}
+
+#point_count {
+    white-space: nowrap;
+    text-align: right;
+}
+
+#coin_image {
+    width: 1em;
+}
+
+#life_board {
+    margin-block-start: .2em;
+    display: grid;
+    grid-template-columns: 1.2em 1.2em 1.2em;
+}
+
+#life_board img {
+    width: 100%;
+}
+
+.active_heart {
+   filter: drop-shadow(0 0 2px yellow);
+}
+
+.broken_heart {
+    filter: grayscale(75%) blur(.5px);
 }
